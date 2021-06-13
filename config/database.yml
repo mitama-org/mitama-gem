@@ -15,11 +15,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  host: localhost
+  host: 127.0.0.1
 
 development:
   <<: *default
-  database: mitama_gem_development
+  database: mitama
+  username: mitama
+  password: password
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
